@@ -1,0 +1,74 @@
+[
+{
+  "name": "Windows Server",
+  "icon": "https://img.icons8.com/color/48/windows-10.png"
+
+},
+{
+  "name": "Windows Client 10/11",
+  "icon": "https://img.icons8.com/color/48/windows-10.png"
+},
+  {
+    "name": "Active Directory (AD)",
+    "icon": "https://img.icons8.com/color/48/active-directory.png"
+  },
+  {
+    "name": "DNS",
+    "icon": "https://img.icons8.com/color/48/dns.png"
+  },
+  {
+    "name": "DHCP",
+    "icon": "https://img.icons8.com/fluency/48/server.png"
+  },
+  {
+    "name": "Group Policy (GPO)",
+    "icon": "https://img.icons8.com/color/48/domain.png"
+  },
+{
+  "name": "Virtualization",
+  "icon": "https://img.icons8.com/color/48/virtual-machine.png"
+},
+  {
+    "name": "PowerShell",
+    "icon": "https://img.icons8.com/color/48/powershell.png"
+  },
+  {
+    "name": "User Support & Maintenance",
+    "icon": "https://img.icons8.com/color/48/support.png"
+  },
+  { "name": "Cisco Routing & Switching", 
+    "icon": "https://img.icons8.com/color/48/switch.png" 
+  },
+  {
+    "name": "WiFi & Access Points",
+    "icon": "https://img.icons8.com/color/48/wifi.png"
+  },
+  {
+    "name": "SysAdmin Tools",
+    "icon": "https://img.icons8.com/color/48/services.png"
+  },
+    {
+    "name": "Firewall & Network Security",
+    "icon": "https://img.icons8.com/color/48/firewall.png"
+  },
+    {
+  "name": "Music Producer & Mixing Engineer",
+  "icon": "https://img.icons8.com/color/48/audio-wave.png"
+},
+  {
+  "name": "Post-Production Technician",
+  "icon": "https://img.icons8.com/color/48/video-editing.png"
+},
+  {
+    "name": "Team Work",
+    "icon": "https://img.icons8.com/color/48/teamwork.png"
+  },
+  {
+    "name": "Organization & Autonomy",
+    "icon": "https://img.icons8.com/color/48/task.png"
+  },
+  {
+    "name": "Clear Communication",
+    "icon": "https://img.icons8.com/color/48/communication.png"
+  }
+]
