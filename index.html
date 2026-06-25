@@ -48,9 +48,11 @@
           <li><a href="#about">profil</a></li>
           <li><a href="#stack">stack</a></li>
           <li><a href="#experience">expérience</a></li>
+          <li><a href="#education">formation</a></li>
           <li><a href="#work">projets</a></li>
           <li><a href="#certifications">certifs</a></li>
           <li><a href="#contact">contact</a></li>
+          <span class="nav-indicator" id="nav-indicator"></span>
         </ul>
       </nav>
     </div>
@@ -63,7 +65,7 @@
         <div class="hero-status mono">
           <span>● SYSTEM ONLINE</span>
           <span id="live-clock">--:--:--</span>
-          <span>TEMARA, MA</span>
+          <span>AGADIR, MA</span>
         </div>
 
         <h1>Adib <span class="accent">Abdellah</span></h1>
@@ -111,7 +113,7 @@
             <div class="ln"><span class="gutter">4</span><span class="k">stage</span><span class="v">:</span> <span class="v">"DXC Technology — Maroc Technopolis"</span></div>
             <div class="ln"><span class="gutter">5</span><span class="k">certs</span><span class="v">:</span> <span class="v">["CCNA", "Ethical Hacker", "CTM"]</span></div>
             <div class="ln"><span class="gutter">6</span><span class="k">projet_phare</span><span class="v">:</span> <span class="v">"SENTINEL — SOC autonome piloté par IA"</span></div>
-            <div class="ln"><span class="gutter">7</span><span class="k">localisation</span><span class="v">:</span> <span class="v">"Temara / Rabat, Maroc"</span></div>
+            <div class="ln"><span class="gutter">7</span><span class="k">localisation</span><span class="v">:</span> <span class="v">"Agadir, Maroc"</span></div>
             <div class="ln"><span class="gutter">8</span><span class="k">disponibilite</span><span class="v ok">:</span> <span class="ok">"immédiate"</span></div>
             <div class="ln"><span class="gutter">9</span><span class="k">permis</span><span class="v">:</span> <span class="v">"B"</span></div>
             <div class="ln"><span class="gutter">10</span><span class="comment">$</span> <span class="warn">_</span></div>
@@ -152,7 +154,7 @@
           <div class="about-facts">
             <div class="fact">
               <div class="k mono">Localisation</div>
-              <div class="v">Temara, Maroc</div>
+              <div class="v">Agadir, Maroc</div>
             </div>
             <div class="fact">
               <div class="k mono">Permis</div>
@@ -321,18 +323,91 @@
     </div>
   </section>
 
+  <!-- ============ EDUCATION ============ -->
+  <section id="education">
+    <div class="container">
+      <div class="eyebrow">04 — FORMATION</div>
+      <div class="section-head">
+        <h2>Parcours académique</h2>
+        <p>Du Baccalauréat au diplôme Bac+2 en Infrastructures Digitales.</p>
+      </div>
+
+      <div class="log-feed reveal">
+
+        <div class="log-entry ongoing">
+          <div class="log-meta">
+            <span class="sev active">BAC+2</span>
+            <span>OCT 2024 → JUIN 2026</span>
+          </div>
+          <h3>Technicien Spécialisé en Infrastructures Digitales</h3>
+          <div class="org">ISTA Sala Al Jadida · Option Systèmes &amp; Réseaux</div>
+          <p>
+            Formation technique intensive couvrant l'administration systèmes (Windows/Linux), l'architecture réseau
+            (routage, commutation, haute disponibilité) et la cybersécurité (SOC, SIEM, pentest). Projet de fin de
+            formation : SENTINEL, plateforme IA de sécurité réseau autonome.
+          </p>
+        </div>
+
+        <div class="log-entry">
+          <div class="log-meta">
+            <span class="sev info">BAC</span>
+            <span>SEP 2022 → JUIN 2023</span>
+          </div>
+          <h3>Baccalauréat Sciences Physiques</h3>
+          <div class="org">Lycée Abi Al-Abbas Al-Sabti</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ============ PROJECTS ============ -->
   <section id="work">
     <div class="container">
-      <div class="eyebrow">04 — DOSSIERS TECHNIQUES</div>
+      <div class="eyebrow">05 — DOSSIERS TECHNIQUES</div>
       <div class="section-head">
         <h2>Projets &amp; rapports d'intervention</h2>
         <p>Chaque dossier reflète une infrastructure réellement déployée — labo physique, VM ou simulation professionnelle.</p>
+        <p class="mono" style="font-size:12.5px; color:var(--text-faint); margin-top:10px;">Triés du plus récent au plus ancien.</p>
       </div>
 
       <div class="case-grid reveal">
 
-        <!-- SENTINEL — featured -->
+        <!-- DXC SOC — most recent -->
+        <div class="case-card featured">
+          <div class="case-media">
+            <div class="diagram-fallback">
+              <div style="text-align:center;">
+                <i class="fas fa-shield-alt"></i>
+                <div style="margin-top:10px; letter-spacing:0.08em;">SIEM / SOAR / XDR — DXC TECHNOLOGY</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-header">
+            <span class="case-id mono">CASE-001 · PFE</span>
+            <span class="case-status">deployed</span>
+          </div>
+          <div class="case-body">
+            <h3>Architecture SOC complète — Stage DXC Technology</h3>
+            <p>
+              Conception et déploiement d'une architecture SOC complète chez DXC Technology (Maroc Technopolis, Rabat) :
+              SIEM (Wazuh) pour la corrélation d'événements, XDR multi-sources, pare-feu OPNsense avec segmentation VLAN,
+              IDS/IPS Suricata, orchestration SOAR via Shuffle, gestion d'incidents TheHive/Cortex, threat intelligence
+              MISP/VirusTotal et boucle IA d'analyse via n8n + Ollama.
+            </p>
+            <div class="case-tags">
+              <span class="tag-chip amber">Wazuh (SIEM/XDR)</span>
+              <span class="tag-chip amber">OPNsense</span>
+              <span class="tag-chip amber">Suricata</span>
+              <span class="tag-chip amber">Shuffle (SOAR)</span>
+              <span class="tag-chip amber">TheHive / Cortex</span>
+              <span class="tag-chip amber">MISP / VirusTotal</span>
+              <span class="tag-chip amber">n8n + Ollama</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SENTINEL -->
         <div class="case-card featured">
           <div class="case-media">
             <div class="diagram-fallback">
@@ -343,7 +418,7 @@
             </div>
           </div>
           <div class="case-header">
-            <span class="case-id mono">CASE-001 · PFF</span>
+            <span class="case-id mono">CASE-002 · PFF</span>
             <span class="case-status">deployed</span>
           </div>
           <div class="case-body">
@@ -371,13 +446,34 @@
           </div>
         </div>
 
+        <!-- Infra PME virtualisée -->
+        <div class="case-card">
+          <div class="case-media">
+            <div class="diagram-fallback"><i class="fas fa-server"></i></div>
+          </div>
+          <div class="case-header">
+            <span class="case-id mono">CASE-003</span>
+            <span class="case-status">deployed</span>
+          </div>
+          <div class="case-body">
+            <h3>Infrastructure d'Entreprise Virtualisée &amp; Sécurisée (PME)</h3>
+            <p>Environnement IT virtualisé orienté sécurité : VMs isolées par rôle, architecture LAN/DMZ, pare-feu pfSense, Active Directory (GPO) et services DNS/DHCP.</p>
+            <div class="case-tags">
+              <span class="tag-chip">Virtualisation</span>
+              <span class="tag-chip">LAN/DMZ</span>
+              <span class="tag-chip">pfSense</span>
+              <span class="tag-chip">Active Directory</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Multi-site network -->
         <div class="case-card">
           <div class="case-media">
             <img draggable="false" src="./assets/images/projects/Dual.jpg" alt="Topologie réseau multi-sites">
           </div>
           <div class="case-header">
-            <span class="case-id mono">CASE-002</span>
+            <span class="case-id mono">CASE-004</span>
             <span class="case-status">deployed</span>
           </div>
           <div class="case-body">
@@ -388,46 +484,6 @@
               <span class="tag-chip cyan">BGP</span>
               <span class="tag-chip cyan">HSRP</span>
               <span class="tag-chip cyan">AAA</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- AD infra -->
-        <div class="case-card">
-          <div class="case-media">
-            <img draggable="false" src="./assets/images/projects/ADDC.png" alt="Infrastructure Active Directory">
-          </div>
-          <div class="case-header">
-            <span class="case-id mono">CASE-003</span>
-            <span class="case-status">deployed</span>
-          </div>
-          <div class="case-body">
-            <h3>Infrastructure Active Directory &amp; PKI</h3>
-            <p>Forêt AD, WDS pour déploiement PXE, autorité de certification interne (AD CS) et HTTPS/IIS pour sécuriser les services web internes.</p>
-            <div class="case-tags">
-              <span class="tag-chip">Active Directory</span>
-              <span class="tag-chip">AD CS / PKI</span>
-              <span class="tag-chip">WDS</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- IIS TLS -->
-        <div class="case-card">
-          <div class="case-media">
-            <img draggable="false" src="./assets/images/projects/IIS.png" alt="Infrastructure IIS TLS">
-          </div>
-          <div class="case-header">
-            <span class="case-id mono">CASE-004</span>
-            <span class="case-status">deployed</span>
-          </div>
-          <div class="case-body">
-            <h3>Infrastructure IIS sécurisée TLS</h3>
-            <p>Déploiement d'un environnement web IIS complet sécurisé par certificats SSL/TLS sur Windows Server, avec gestion du cycle de vie des certificats.</p>
-            <div class="case-tags">
-              <span class="tag-chip">IIS</span>
-              <span class="tag-chip">TLS/SSL</span>
-              <span class="tag-chip">Windows Server</span>
             </div>
           </div>
         </div>
@@ -452,13 +508,73 @@
           </div>
         </div>
 
+        <!-- WDS & AD deployment -->
+        <div class="case-card">
+          <div class="case-media">
+            <div class="diagram-fallback"><i class="fas fa-network-wired"></i></div>
+          </div>
+          <div class="case-header">
+            <span class="case-id mono">CASE-006</span>
+            <span class="case-status">deployed</span>
+          </div>
+          <div class="case-body">
+            <h3>Déploiement Automatisé via WDS &amp; Active Directory</h3>
+            <p>Serveur de déploiement PXE Boot, intégration au domaine AD, GPO post-déploiement et images système (WIM) personnalisées sur machines physiques.</p>
+            <div class="case-tags">
+              <span class="tag-chip">WDS</span>
+              <span class="tag-chip">PXE Boot</span>
+              <span class="tag-chip">WIM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AD infra -->
+        <div class="case-card">
+          <div class="case-media">
+            <img draggable="false" src="./assets/images/projects/ADDC.png" alt="Infrastructure Active Directory">
+          </div>
+          <div class="case-header">
+            <span class="case-id mono">CASE-007</span>
+            <span class="case-status">deployed</span>
+          </div>
+          <div class="case-body">
+            <h3>Infrastructure Active Directory &amp; PKI</h3>
+            <p>Forêt AD, WDS pour déploiement PXE, autorité de certification interne (AD CS) et HTTPS/IIS pour sécuriser les services web internes.</p>
+            <div class="case-tags">
+              <span class="tag-chip">Active Directory</span>
+              <span class="tag-chip">AD CS / PKI</span>
+              <span class="tag-chip">WDS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- IIS TLS -->
+        <div class="case-card">
+          <div class="case-media">
+            <img draggable="false" src="./assets/images/projects/IIS.png" alt="Infrastructure IIS TLS">
+          </div>
+          <div class="case-header">
+            <span class="case-id mono">CASE-008</span>
+            <span class="case-status">deployed</span>
+          </div>
+          <div class="case-body">
+            <h3>Infrastructure IIS sécurisée TLS</h3>
+            <p>Déploiement d'un environnement web IIS complet sécurisé par certificats SSL/TLS sur Windows Server, avec gestion du cycle de vie des certificats.</p>
+            <div class="case-tags">
+              <span class="tag-chip">IIS</span>
+              <span class="tag-chip">TLS/SSL</span>
+              <span class="tag-chip">Windows Server</span>
+            </div>
+          </div>
+        </div>
+
         <!-- RADIUS -->
         <div class="case-card">
           <div class="case-media">
             <div class="diagram-fallback"><i class="fas fa-wifi"></i></div>
           </div>
           <div class="case-header">
-            <span class="case-id mono">CASE-006</span>
+            <span class="case-id mono">CASE-009</span>
             <span class="case-status">deployed</span>
           </div>
           <div class="case-body">
@@ -468,6 +584,26 @@
               <span class="tag-chip">RADIUS</span>
               <span class="tag-chip">802.1X</span>
               <span class="tag-chip">WPA2-Enterprise</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cisco team project -->
+        <div class="case-card">
+          <div class="case-media">
+            <div class="diagram-fallback"><i class="fas fa-sitemap"></i></div>
+          </div>
+          <div class="case-header">
+            <span class="case-id mono">CASE-010</span>
+            <span class="case-status">deployed</span>
+          </div>
+          <div class="case-body">
+            <h3>Projet Réseau &amp; Sécurité en Équipe — Infrastructure Cisco Réelle</h3>
+            <p>Déploiement de 4 switches Catalyst 2950, 5 routeurs Cisco et un pare-feu pfSense : OSPF multi-area, VLAN trunking, Port Security, supervision NetFlow et Zabbix.</p>
+            <div class="case-tags">
+              <span class="tag-chip cyan">OSPF Multi-Area</span>
+              <span class="tag-chip cyan">Port Security</span>
+              <span class="tag-chip cyan">Zabbix</span>
             </div>
           </div>
         </div>
@@ -483,7 +619,7 @@
   <!-- ============ CERTIFICATIONS ============ -->
   <section id="certifications">
     <div class="container">
-      <div class="eyebrow">05 — REGISTRE DE CERTIFICATIONS</div>
+      <div class="eyebrow">06 — REGISTRE DE CERTIFICATIONS</div>
       <div class="section-head">
         <h2>Credential ledger</h2>
         <p>Certifications Cisco obtenues entre avril 2025 et mars 2026.</p>
@@ -523,7 +659,7 @@
             <div class="cred-issuer mono">Cisco Networking Academy</div>
           </div>
           <div class="cred-date mono">Mar 2026</div>
-          <a href="https://www.credly.com/users/adib-abdellah/badges" target="_blank" class="cred-link mono">Voir <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://www.credly.com/badges/af6311d1-5aed-4daa-a2f7-f9ef715fc432" target="_blank" class="cred-link mono">Voir <i class="fas fa-external-link-alt"></i></a>
         </div>
 
         <div class="ledger-row">
@@ -587,7 +723,7 @@
   <!-- ============ CONTACT ============ -->
   <section id="contact">
     <div class="container">
-      <div class="eyebrow">06 — CANAL DE CONTACT</div>
+      <div class="eyebrow">07 — CANAL DE CONTACT</div>
       <div class="section-head">
         <h2>Disponible immédiatement</h2>
         <p>Stage terminé, diplôme en poche — prêt pour un poste en systèmes, réseaux ou cybersécurité.</p>
@@ -613,7 +749,7 @@
           </a>
           <div class="channel" style="cursor:default;">
             <i class="fas fa-map-marker-alt"></i>
-            <div><div class="l">Localisation</div><div class="v">Temara, Maroc</div></div>
+            <div><div class="l">Localisation</div><div class="v">Agadir, Maroc</div></div>
           </div>
         </div>
 
@@ -644,12 +780,11 @@
         <div class="footer-socials">
           <a href="https://www.linkedin.com/in/adib-abdellah" target="_blank"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/Adib-Abdellah" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/adibprod_33/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="mailto:adib.abdellah.professionnel@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Adib Abdellah · Temara, Maroc</span>
+        <span>© 2026 Adib Abdellah · Agadir, Maroc</span>
         <span>Build v2.0 — last deploy: <span id="build-date"></span></span>
       </div>
     </div>

@@ -28,21 +28,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---- Active nav link on scroll ---- */
+  /* ---- Active nav link on scroll, with sliding indicator ---- */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.navbar a');
+  const navIndicator = document.getElementById('nav-indicator');
+  const navUl = document.querySelector('.navbar ul');
+
+  const moveIndicatorTo = (link) => {
+    if (!navIndicator || !navUl || !link) return;
+    const ulRect = navUl.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    // Only show the sliding underline in desktop layout (horizontal nav).
+    // In the mobile stacked menu the link sits on its own line, so a
+    // horizontal underline doesn't make sense there.
+    if (window.innerWidth <= 860) {
+      navIndicator.style.opacity = '0';
+      return;
+    }
+    navIndicator.style.opacity = '1';
+    navIndicator.style.left = (linkRect.left - ulRect.left) + 'px';
+    navIndicator.style.width = linkRect.width + 'px';
+  };
+
   const setActive = () => {
     let current = '';
     sections.forEach(sec => {
       const rect = sec.getBoundingClientRect();
       if (rect.top <= 120 && rect.bottom >= 120) current = sec.id;
     });
+    let activeLink = null;
     navLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      const isActive = link.getAttribute('href') === '#' + current;
+      link.classList.toggle('active', isActive);
+      if (isActive) activeLink = link;
     });
+    if (activeLink) moveIndicatorTo(activeLink);
   };
   window.addEventListener('scroll', setActive);
+  window.addEventListener('resize', setActive);
   setActive();
+  // re-sync once webfonts/layout settle (link widths can shift slightly)
+  setTimeout(setActive, 400);
 
   /* ---- Scroll-to-top button ---- */
   const scrollTopBtn = document.getElementById('scroll-top');
@@ -101,6 +127,46 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(tick, deleting ? 35 : 55);
     };
     tick();
+  }
+
+  /* ---- Magnetic tilt on profile photo (reacts to cursor on/near it) ---- */
+  const photoWrap = document.querySelector('.about-photo-wrap');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (photoWrap && !prefersReducedMotion) {
+    const maxTilt = 10;       // degrees
+    const influenceRadius = 220; // px around the element that still nudges it
+    const handleMove = (e) => {
+      const rect = photoWrap.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = e.clientX - cx;
+      const dy = e.clientY - cy;
+      const dist = Math.hypot(dx, dy);
+      const maxDist = Math.max(rect.width, rect.height) / 2 + influenceRadius;
+      if (dist > maxDist) {
+        photoWrap.style.setProperty('--tilt-x', '0deg');
+        photoWrap.style.setProperty('--tilt-y', '0deg');
+        return;
+      }
+      const strength = 1 - Math.min(dist / maxDist, 1); // 1 = right over it, 0 = at the edge of influence
+      const tiltX = (dx / (rect.width / 2)) * maxTilt * strength;
+      const tiltY = -(dy / (rect.height / 2)) * maxTilt * strength;
+      photoWrap.style.setProperty('--tilt-x', tiltX.toFixed(2) + 'deg');
+      photoWrap.style.setProperty('--tilt-y', tiltY.toFixed(2) + 'deg');
+      // glow follows cursor only while actually over the card
+      if (dist < Math.max(rect.width, rect.height) / 2) {
+        const gx = ((e.clientX - rect.left) / rect.width) * 100;
+        const gy = ((e.clientY - rect.top) / rect.height) * 100;
+        photoWrap.style.setProperty('--glow-x', gx + '%');
+        photoWrap.style.setProperty('--glow-y', gy + '%');
+      }
+    };
+    const resetTilt = () => {
+      photoWrap.style.setProperty('--tilt-x', '0deg');
+      photoWrap.style.setProperty('--tilt-y', '0deg');
+    };
+    window.addEventListener('mousemove', handleMove);
+    document.addEventListener('mouseleave', resetTilt);
   }
 
   /* ---- Contact form via Formspree (AJAX, keeps user on page) ---- */

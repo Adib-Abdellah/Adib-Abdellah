@@ -34,4 +34,4 @@ Certifié Cisco : CCNA (Introduction to Networks), Ethical Hacker, Cyber Threat 
 
 - 📧 [adib.abdellah.professionnel@gmail.com](mailto:adib.abdellah.professionnel@gmail.com)
 - 🔗 [linkedin.com/in/adib-abdellah](https://www.linkedin.com/in/adib-abdellah)
-- 📍 Temara, Maroc — disponible immédiatement
+- 📍 Agadir, Maroc — disponible immédiatement
